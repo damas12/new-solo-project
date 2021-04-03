@@ -1,0 +1,52 @@
+.btn-sm-orange {
+  height: 41px;
+  width: 41px;
+  background-color: $orange-color;
+  border: 1px solid $orange-color;
+  border-radius: 3px;
+
+  img {
+    margin-top: 2px;
+    height: 15px;
+    width: 15px;
+    font-size: 30px;
+    display: inline-block;
+    filter: brightness(1) invert(1) opacity(1);
+  }
+}
+
+.btn-lg-key {
+  width: 90px;
+  background-color: #F3F3F1;
+  border: none;
+  border-radius: 3px;
+  color: #6F7174;
+
+  &:hover {
+    background-color: none;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .blue {
+    background-color: #82B4BF;
+  }
+
+  .orange {
+    background-color: $orange-color;
+  }
+
+  .green {
+    background-color: green;
+  }
+}
+
+.btn-lg-key-nogray {
+  background-color: $just-white-color;
+}

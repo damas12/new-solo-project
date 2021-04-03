@@ -1,13 +1,59 @@
 .body {
+  box-sizing: border-box;
   background-color: #f5f5f2;
   padding: 1vw 1vw 1vw 13vw;
+  height: 102.5vw;
 }
 
 .chart {
-  height: 48vw;
+  height: 55vw;
   background-color: $just-white-color;
+}
+
+h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: $title-font;
+}
+
+h3 {
+  font-family: $title-font;
+  font-size: 14px;
+  margin: 30px 0;
+}
+
+.general-content {
+  display: grid;
+  justify-content: center;
+
+  img {
+    height: 320px;
+    width: 620px;
+  }
+
+  .background-buttons {
+    margin: 0 auto;
+
+    .btn-lg-key {
+      margin-right: 30px;
+    }
+  }
+}
+
+.main-page-background {
+  .btn-sm-orange {
+    margin-left: 20px;
+    margin-top: 1px;
+  }
+}
+
+.chart-container {
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .chart2 {
   margin-top: 1vw;
+  height: 46vw;
 }

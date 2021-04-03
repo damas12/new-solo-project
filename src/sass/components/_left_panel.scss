@@ -29,7 +29,7 @@
 
     a {
       text-decoration: none;
-      color: $panel-gray-color;
+      color: $gray-color;
     }
 
     .active {
@@ -51,7 +51,7 @@
       height: 45px;
       width: 5px;
       left: 0%;
-      background-color: $orange-active-color;
+      background-color: $orange-color;
     }
 
     li {
@@ -89,7 +89,7 @@
   font-size: 14px;
 
   h4 {
-    color: $panel-gray-color;
+    color: $gray-color;
     text-transform: uppercase;
     height: 14px;
   }
