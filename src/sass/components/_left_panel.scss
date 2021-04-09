@@ -1,8 +1,15 @@
-.panel {
-  width: 12vw;
-  height: 109vw;
+.panel-content {
+  display: inline-block;
   background-color: #191919;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  position: fixed;
+  width: 12vw;
+  height: 100%;
+  background-color: #191919;
   overflow: hidden;
   font-family: $title-font;
 
@@ -13,7 +20,7 @@
 
     .hamburger {
       float: right;
-      margin: 0 19px 0 0;
+      margin: 5px 19px 0 0;
     }
 
     img {
@@ -40,7 +47,7 @@
       }
 
 
-      img {
+      .panel-icon {
         filter: brightness(0.5) invert(1) opacity(1);
       }
     }
@@ -58,11 +65,11 @@
       padding-left: 18px;
       height: 45px;
 
-      img {
+      .panel-icon {
         max-width: 20px;
         max-height: 15px;
         filter: brightness(0.5) invert(1) opacity(0.5);
-        padding-top: 14px;
+        margin-top: 13px;
         position: absolute;
       }
 
@@ -105,5 +112,36 @@
       text-decoration: none;
       color: #56819F;
     }
+  }
+}
+
+@media (max-width: 1350px) {
+  .panel {
+    .pagelogo {
+      img {
+        display: none;
+      }
+
+      p {
+        margin: 5px 65px 0 30px !important;
+      }
+
+      i.fas.fa-bars {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .panel {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .panel {
+    height: 6.44vh;
+
   }
 }

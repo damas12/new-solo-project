@@ -5,7 +5,7 @@
   border: 1px solid $orange-color;
   border-radius: 3px;
 
-  img {
+  svg {
     margin-top: 2px;
     height: 15px;
     width: 15px;
@@ -13,6 +13,18 @@
     display: inline-block;
     filter: brightness(1) invert(1) opacity(1);
   }
+}
+
+.btn-lg-orange {
+  height: 41px;
+  width: 127px;
+  background-color: $orange-color;
+  border: 1px solid $orange-color;
+  border-radius: 3px;
+  color: $just-white-color;
+  font-size: 18px;
+  font-family: $title-font;
+  margin: 22px 0 22px 0;
 }
 
 .btn-lg-key {
