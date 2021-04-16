@@ -2,13 +2,14 @@
 
 function toggleMenu(visible) {
   document.querySelector('.panel').classList.toggle('show', visible);
+  document.querySelector('.charts').classList.toggle('show', visible);
 }
-document.querySelector('.hamburger').addEventListener('click', function (e) {
+document.querySelector('.menu-hamburger').addEventListener('click', function (e) {
   e.preventDefault();
   toggleMenu();
 });
 
-/* function closeModal() {
+function closeModal() {
   document.getElementById('overlay').classList.remove('show');
 }
 document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
@@ -28,10 +29,18 @@ document.addEventListener('keyup', function (e) {
   }
 });
 
-function openModal(modal) {
+function toggleModal(modal) {
   document.querySelectorAll('#overlay > *').forEach(function (modal) {
     modal.classList.remove('show');
   });
   document.querySelector('#overlay').classList.add('show');
   document.querySelector(modal).classList.add('show');
-} */
+}
+document.querySelector('.wrapper-logout').addEventListener('click', function (e) {
+  e.preventDefault();
+  toggleModal('#myModal');
+});
+document.querySelector('.wrapper-notification').addEventListener('click', function (e) {
+  e.preventDefault();
+  toggleModal('#myModal2');
+});

@@ -35,3 +35,13 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .component-calendar .calendar-box {
+    width: 130px;
+  }
+
+  .main-page-background .btn-sm-orange {
+    margin-left: 5px;
+  }
+}

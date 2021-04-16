@@ -1,31 +1,21 @@
 .panel-content {
-  display: inline-block;
-  background-color: #191919;
-  width: 100%;
-  height: 100%;
-}
-
-.panel {
-  position: fixed;
-  width: 12vw;
+  position: absolute;
+  width: 189px;
   height: 100%;
   background-color: #191919;
-  overflow: hidden;
   font-family: $title-font;
+  z-index: 200;
+  transition: transform 0.3s;
 
   .pagelogo {
     color: $just-white-color;
     margin: 18px 0 19px 20px;
     height: 23px;
 
-    .hamburger {
-      float: right;
-      margin: 5px 19px 0 0;
-    }
 
     img {
       display: block;
-      float: left;
+      position: absolute;
     }
   }
 
@@ -115,33 +105,82 @@
   }
 }
 
-@media (max-width: 1350px) {
+.mobile-overlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-hamburger {
+  transition: all 0.4s ease;
+  position: absolute;
+  color: $just-white-color;
+  font-size: 20px;
+  z-index: 100;
+  left: 155px;
+  top: 20px;
+  z-index: 201;
+}
+
+.show .menu-hamburger {
+  width: 50px;
+  height: 50px;
+  background-color: #191919;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px black;
+  top: 120px;
+  left: 30px;
+  position: fixed;
+}
+
+.show .panel-content {
+  transform: translateX(-250px);
+}
+
+.show.panel i {
+  margin-top: 5px;
+  margin-left: 7px;
+  color: white;
+  font-size: 40px;
+}
+
+@media (max-width: 992px) {
   .panel {
-    .pagelogo {
-      img {
-        display: none;
-      }
+    position: fixed !important;
+  }
 
-      p {
-        margin: 5px 65px 0 30px !important;
-      }
+  .mobile-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
 
-      i.fas.fa-bars {
-        font-size: 30px;
-      }
-    }
+  .show .mobile-overlay {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
-  .panel {
-    width: 150px;
+/* @media (max-width: 1000px) {
+    .panel-content {
+    visibility: hidden;
   }
-}
 
-@media (max-width: 1000px) {
-  .panel {
-    height: 6.44vh;
-
+  .menu-hamburger::after {
+    visibility: visible !important;
+    position: fixed;
   }
-}
+
+  .menu-hamburger::before {
+    visibility: visible !important;
+    position: fixed;
+  }
+
+
+} */
